@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "author": "Camille Moreau",
+    "location": "Paris",
+    "rating": 5,
+    "date": "2026-10-18",
+    "comment": "J’ai pris le pack basique à 45 €/an et l’activation a été rapide après la confirmation du paiement. Je l’utilise sur la Smart TV LG pour les chaînes françaises et la Ligue 1, avec Canal+. Aucun souci jusqu’ici."
+  },
+  {
+    "id": 2,
+    "author": "Julien Bernard",
+    "location": "Lyon",
+    "rating": 4,
+    "date": "2026-10-17",
+    "comment": "J’ai eu un petit doute en saisissant les identifiants Xtream sur le Fire Stick, mais l’assistance a répondu vite sur WhatsApp et c’était réglé. Bon service."
+  },
+  {
+    "id": 3,
+    "author": "Léa Dubois",
+    "location": "Marseille",
+    "rating": 5,
+    "date": "2026-10-16",
+    "comment": "La section VOD de films et de séries a un catalogue bien à jour, avec des sous-titres en français. La qualité d’image est très bonne sur la télé du salon."
+  },
+  {
+    "id": 4,
+    "author": "Thomas Laurent",
+    "location": "Toulouse",
+    "rating": 5,
+    "date": "2026-10-15",
+    "comment": "J’ai demandé l’essai de 24 heures avant d’acheter pour le tester sur le réseau de la maison. Tout s’est bien passé et je suis passé au pack trimestriel à 25 €."
+  },
+  {
+    "id": 5,
+    "author": "Chloé Martin",
+    "location": "Bordeaux",
+    "rating": 5,
+    "date": "2026-10-14",
+    "comment": "Les chaînes françaises en direct tiennent sans coupure. Les soirs de Ligue des champions, la diffusion reste stable, y compris sur Canal+."
+  },
+  {
+    "id": 6,
+    "author": "Nicolas Petit",
+    "location": "Lille",
+    "rating": 4,
+    "date": "2026-10-13",
+    "comment": "Au début, en Wi‑Fi, j’avais un peu d’instabilité en 4K, mais j’ai branché la box en câble Ethernet et c’est devenu parfait. Je recommande le câble pour le sport."
+  },
+  {
+    "id": 7,
+    "author": "Manon Roux",
+    "location": "Nantes",
+    "rating": 5,
+    "date": "2026-10-12",
+    "comment": "J’ai pris le forfait 2 connexions (89 €/an) pour le salon et la chambre en même temps. Ça correspond exactement à ce qui est annoncé."
+  },
+  {
+    "id": 8,
+    "author": "Antoine Lefèvre",
+    "location": "Strasbourg",
+    "rating": 5,
+    "date": "2026-10-10",
+    "comment": "Très satisfait du guide TV (EPG) et de l’organisation de la liste. Le changement de chaîne est rapide, on a vraiment l’impression d’une télé classique."
+  },
+  {
+    "id": 9,
+    "author": "Sarah Girard",
+    "location": "Nice",
+    "rating": 4,
+    "date": "2026-10-09",
+    "comment": "L’application IBO Player fonctionne très bien avec les identifiants qu’on m’a envoyés. L’envoi aurait pu être un peu plus rapide, même si ça a pris moins de 15 minutes."
+  },
+  {
+    "id": 10,
+    "author": "Hugo Morel",
+    "location": "Rennes",
+    "rating": 5,
+    "date": "2026-10-08",
+    "comment": "Tarif assez honnête pour la quantité de contenu. Accueil aimable et en français sur WhatsApp."
+  },
+  {
+    "id": 11,
+    "author": "Emma Faure",
+    "location": "Montpellier",
+    "rating": 5,
+    "date": "2026-10-07",
+    "comment": "Ça fonctionne très bien ici. Je l’ai testé pendant les matchs du week-end et je n’ai eu aucune coupure."
+  },
+  {
+    "id": 12,
+    "author": "Lucas Mercier",
+    "location": "Grenoble",
+    "rating": 4,
+    "date": "2026-10-06",
+    "comment": "Bonne sélection de chaînes pour les enfants et de séries pour le soir. Interface simple à prendre en main."
+  },
+  {
+    "id": 13,
+    "author": "Inès Chevalier",
+    "location": "Dijon",
+    "rating": 5,
+    "date": "2026-10-04",
+    "comment": "J’ai pris le pack famille de 3 connexions pour le répartir dans la maison. Activation après le paiement sans complication."
+  },
+  {
+    "id": 14,
+    "author": "Mathieu Blanc",
+    "location": "Reims",
+    "rating": 5,
+    "date": "2026-10-03",
+    "comment": "Service client très attentif. On m’a expliqué comment installer la bonne application sur ma Smart TV Samsung."
+  },
+  {
+    "id": 15,
+    "author": "Clara Fontaine",
+    "location": "Le Havre",
+    "rating": 4,
+    "date": "2026-10-01",
+    "comment": "Image nette sur les chaînes FHD et 4K. Je recommande une connexion Internet correcte pour profiter du service — chez moi c’est la fibre Orange."
+  },
+  {
+    "id": 16,
+    "author": "Olivier Garnier",
+    "location": "Saint-Étienne",
+    "rating": 5,
+    "date": "2026-09-29",
+    "comment": "Service direct et transparent. Paiement unique, sans renouvellements automatiques non souhaités."
+  },
+  {
+    "id": 17,
+    "author": "Pauline Roy",
+    "location": "Toulon",
+    "rating": 5,
+    "date": "2026-09-28",
+    "comment": "Je l’utilise avec TiviMate sur une box Android et ça tourne à 100 %. Le changement de chaînes est instantané."
+  },
+  {
+    "id": 18,
+    "author": "Baptiste Colin",
+    "location": "Angers",
+    "rating": 5,
+    "date": "2026-09-26",
+    "comment": "Excellente stabilité sur les directs de Ligue 1. Pas de buffering au milieu des matchs, même sur Canal+."
+  },
+  {
+    "id": 19,
+    "author": "Julie Perrin",
+    "location": "Nîmes",
+    "rating": 4,
+    "date": "2026-09-25",
+    "comment": "Connexion très simple avec Xtream Codes. Le VOD a planté sur un vieux film, mais dans l’ensemble la bibliothèque est énorme."
+  },
+  {
+    "id": 20,
+    "author": "Adrien Marchand",
+    "location": "Clermont-Ferrand",
+    "rating": 5,
+    "date": "2026-09-23",
+    "comment": "J’ai apprécié la facilité de contact et la garantie de 7 jours expliquée sur la page. Ça donne plus confiance au moment d’acheter."
+  },
+  {
+    "id": 21,
+    "author": "Élodie Lambert",
+    "location": "Tours",
+    "rating": 5,
+    "date": "2026-09-22",
+    "comment": "Signal constant. Les retransmissions sportives en HD/4K sont d’un très bon niveau, y compris les soirées de Ligue 1."
+  },
+  {
+    "id": 22,
+    "author": "Vincent Rousseau",
+    "location": "Amiens",
+    "rating": 4,
+    "date": "2026-09-20",
+    "comment": "Bonnes chaînes françaises et internationales. Le guide des programmes aide vraiment à suivre la grille."
+  },
+  {
+    "id": 23,
+    "author": "Aurélie Denis",
+    "location": "Limoges",
+    "rating": 5,
+    "date": "2026-09-18",
+    "comment": "Activation le jour même. La liste a l’essentiel pour qui vit en France, avec Canal+ et les chaînes du quotidien."
+  },
+  {
+    "id": 24,
+    "author": "Pierre Bonnet",
+    "location": "Metz",
+    "rating": 5,
+    "date": "2026-09-16",
+    "comment": "Très pratique d’avoir les chaînes en direct et les films au même endroit, pour un tarif annuel assez abordable."
+  },
+  {
+    "id": 25,
+    "author": "Sophie Leclerc",
+    "location": "Besançon",
+    "rating": 4,
+    "date": "2026-09-15",
+    "comment": "Installation facile en suivant le guide du site. J’ai dû redémarrer la box Free le premier jour, ensuite c’était 100 % stable."
+  },
+  {
+    "id": 26,
+    "author": "Maxime Henry",
+    "location": "Orléans",
+    "rating": 5,
+    "date": "2026-09-12",
+    "comment": "Je viens de renouveler pour la deuxième année. La qualité du service est restée constante dans le temps."
+  },
+  {
+    "id": 27,
+    "author": "Laura Simon",
+    "location": "Rouen",
+    "rating": 5,
+    "date": "2026-09-10",
+    "comment": "Parfait pour suivre la Premier League et la Ligue des champions sans coupure dans le streaming."
+  },
+  {
+    "id": 28,
+    "author": "Romain Michel",
+    "location": "Mulhouse",
+    "rating": 4,
+    "date": "2026-09-08",
+    "comment": "Bon rapport qualité-prix. Assistance attentive pour les questions sur les forfaits 1 ou 2 connexions. La fibre SFR tient bien le HD."
+  },
+  {
+    "id": 29,
+    "author": "Céline Barbier",
+    "location": "Caen",
+    "rating": 5,
+    "date": "2026-09-05",
+    "comment": "Ça fonctionne sur l’ordinateur et sur la Smart TV sans problème. Serveur plutôt rapide."
+  },
+  {
+    "id": 30,
+    "author": "François Muller",
+    "location": "Nancy",
+    "rating": 5,
+    "date": "2026-09-03",
+    "comment": "Service fiable, réactif sur WhatsApp et simple à utiliser. Tout ce qui est annoncé sur le site est au rendez-vous, y compris les chaînes françaises."
+  }
+]

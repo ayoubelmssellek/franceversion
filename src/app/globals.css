@@ -1,0 +1,302 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #080c14;
+  --bg-deep: #0b1220;
+  --bg-surface: #121a2c;
+  --bg-light: #fefefe;
+  --bg-cloud: #e9ecf2;
+  --fg: #ffffff;
+  --fg-charcoal: #404040;
+  --fg-near: #3f3f3f;
+  --fg-slate: #9aa8bc;
+  --fg-mid: #7f8da3;
+  --fg-muted: #b4c0d0;
+  --fg-footer: #9aa8bc;
+  --border-dark: #243044;
+  --border-light: #c9ccd1;
+  --border-lighter: #d0d4d4;
+  /* France flag. Class names pt-green still exist; they now carry flag blue. */
+  --pt-green: #0055a4;
+  --pt-green-bright: #1a6ecc;
+  --pt-red: #ef4135;
+  --pt-red-bright: #ff5a4f;
+  --pt-gold: #ffffff;
+  /* Trial banner + nav — hero fills the rest of the first viewport */
+  --site-header-h: 7rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --site-header-h: 8rem;
+  }
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-surface: var(--bg-surface);
+  --color-deep: var(--bg-deep);
+  --color-cloud: var(--bg-cloud);
+  --color-charcoal: var(--fg-charcoal);
+  --color-slate: var(--fg-slate);
+  --color-mid: var(--fg-mid);
+  --color-muted: var(--fg-muted);
+  --color-footer: var(--fg-footer);
+  --color-line: var(--border-dark);
+  --color-line-light: var(--border-light);
+  --color-accent: var(--pt-red);
+  --color-accent-bright: var(--pt-red-bright);
+  --color-accent-hot: var(--pt-green-bright);
+  --color-pt-green: var(--pt-green);
+  --color-pt-green-bright: var(--pt-green-bright);
+  --color-pt-red: var(--pt-red);
+  --color-pt-red-bright: var(--pt-red-bright);
+  --color-pt-gold: var(--pt-gold);
+  --color-elevated: #1a1a1a;
+  --color-soft: #1a1a1a;
+  --font-sans: var(--font-dm);
+  --animate-vod-marquee: vod-marquee 40s linear infinite;
+}
+
+@keyframes vod-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-vod-marquee {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-dm), system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.16px;
+  line-height: 1.4;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.display {
+  font-family: var(--font-dm), system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -1.2px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--pt-green) 55%, #111);
+  color: #ffffff;
+}
+
+.panel-light {
+  background: #ffffff;
+  color: #111111;
+}
+
+.panel-light ::selection,
+.panel-light *::selection {
+  background: color-mix(in srgb, var(--pt-red) 35%, #27272a);
+  color: #ffffff;
+}
+
+input::selection,
+textarea::selection,
+select::selection {
+  background: color-mix(in srgb, var(--pt-green) 55%, #111);
+  color: #ffffff;
+}
+
+select option {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.section-shell {
+  width: min(1400px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: var(--pt-green-bright);
+}
+
+.micro {
+  font-size: 11px;
+  font-weight: 450;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.16px;
+  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+
+.btn-solid {
+  background: var(--pt-red);
+  color: #ffffff;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--pt-red) 40%, transparent);
+}
+
+.btn-solid:hover {
+  background: var(--pt-red-bright);
+  opacity: 1;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--pt-red) 35%, transparent);
+}
+
+.btn-ghost {
+  background: color-mix(in srgb, var(--pt-green) 12%, transparent);
+  color: #ffffff;
+  border: 1px solid color-mix(in srgb, var(--pt-green-bright) 45%, #27272a);
+}
+
+.btn-ghost:hover {
+  background: color-mix(in srgb, var(--pt-green) 22%, transparent);
+  border-color: var(--pt-green-bright);
+  opacity: 1;
+}
+
+.pt-flag-rail {
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    #0055a4 0 33.33%,
+    #ffffff 33.33% 66.66%,
+    #ef4135 66.66% 100%
+  );
+}
+
+.brand-mark {
+  background: linear-gradient(90deg, #0055a4 0%, #ffffff 48%, #ef4135 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.surface {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--pt-green-bright);
+  outline-offset: 2px;
+}
+
+.img-frame {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: fade-up 0.7s ease both;
+}
+
+.animate-rise-delay-1 {
+  animation: fade-up 0.7s ease 0.12s both;
+}
+
+.animate-rise-delay-2 {
+  animation: fade-up 0.7s ease 0.22s both;
+}
+
+/* Hero LCP-safe motion: translate only (never hide text with opacity:0) */
+@keyframes rise-y {
+  from {
+    transform: translateY(12px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-rise-y {
+  animation: rise-y 0.7s ease both;
+}
+
+.animate-rise-y-delay-1 {
+  animation: rise-y 0.7s ease 0.12s both;
+}
+
+.animate-rise-y-delay-2 {
+  animation: rise-y 0.7s ease 0.22s both;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-soft {
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-vod-marquee {
+    animation: none !important;
+  }
+}

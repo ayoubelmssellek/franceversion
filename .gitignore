@@ -1,0 +1,72 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Testing
+/coverage
+
+# Next.js / caches
+/.next/
+/out/
+/.turbo/
+.turbo/
+
+# Production / build
+/build
+/dist
+
+# Misc
+.DS_Store
+Thumbs.db
+*.pem
+*.key
+
+# Debug / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.log
+
+# Environment / secrets — never commit
+.env
+.env.*
+!.env.example
+!.env*.example
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# SEO ops — local GSC / Semrush lists only (NOT used by the Next.js build).
+# Still tracked: README.md, indexing-queue.md, image-keyword-*.md/json, audits.
+# Never ignore: /src, /public, /scripts, package.json, next.config.*, sitemap, robots.
+/seo-ops/*.csv
+/seo-ops/*.tsv
+/seo-ops/gsc-*
+/seo-ops/semrush*
+!/seo-ops/README.md
+
+# Local SEO dumps at repo root only (leading / = root — does not touch src/)
+/keyword injector/
+/Semrush*
+/semrush*
+# Local scratch / OS
+*.local
+.DS_Store
+Thumbs.db

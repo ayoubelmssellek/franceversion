@@ -1,0 +1,17 @@
+---
+description: France IPTV site — scope
+alwaysApply: true
+---
+
+# France project context
+
+This workspace is **`stream_website_france`**: MeilleurIPTVFrance, French (`fr-FR`), France market.
+
+## Hard rules
+
+- Work **only** in this folder. Never modify the Spain or Portugal project folders.
+- Public copy, URLs, image names, alts, and keywords stay in French for France.
+- French national channel slots stay empty until the owner supplies logos and names.
+- Brand name, domain, contact, and OG image may change — confirm with the owner if unclear.
+
+Read `FRANCE.md` at the repo root for status and run instructions.
