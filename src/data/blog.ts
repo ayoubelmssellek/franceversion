@@ -220,7 +220,7 @@ export const posts: Post[] = [
     date: "2026-01-18",
     minutes: 8,
     cover: coverBestLiveTv,
-    coverAlt: "Terrain de football — IPTV en direct en France",
+    coverAlt: "Match de football à la télévision — IPTV en direct en France",
     relatedPaths: [
       {
         href: "/chaines",
@@ -821,7 +821,7 @@ export const posts: Post[] = [
     updated: "2026-07-26",
     minutes: 11,
     cover: coverSportFrance,
-    coverAlt: "Football — Canal+ IPTV France",
+    coverAlt: "Stade de football la nuit — sport IPTV France",
     relatedPaths: [
       {
         href: "/chaines#sport-tv",

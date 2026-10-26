@@ -43,6 +43,22 @@ def keywords_for(name: str) -> list[str]:
 
 
 def alt_for(name: str) -> str:
+    blog = ROOT / "src" / "data" / "blog.ts"
+    if blog.exists():
+        import re
+
+        text = blog.read_text(encoding="utf-8")
+        binding = re.search(
+            r'import\s+(\w+)\s+from\s+"@/assets/blogs/' + re.escape(name) + r'"',
+            text,
+        )
+        if binding:
+            alt = re.search(
+                r"cover:\s+" + binding.group(1) + r',\s*coverAlt:\s*"([^"]+)"',
+                text,
+            )
+            if alt:
+                return alt.group(1)
     label = Path(name).stem.replace("-", " ")
     return f"{label} — {BRAND}"
 
@@ -75,10 +91,20 @@ def inject_png(path: Path, keywords: list[str], alt: str) -> str:
 
 
 def inject_webp(path: Path, keywords: list[str], alt: str) -> str:
-    image = Image.open(path)
-    exif = image.getexif()
-    exif[270] = alt
-    image.save(path, exif=exif.tobytes(), quality=90)
+    image = Image.open(path).convert("RGB")
+    if piexif is None:
+        exif = image.getexif()
+        exif[270] = alt
+        image.save(path, exif=exif.tobytes(), quality=86)
+        return "injected-fr:webp-description-only"
+    keywords_text = ", ".join(keywords)
+    zeroth = {
+        piexif.ImageIFD.ImageDescription: alt.encode("utf-8"),
+        piexif.ImageIFD.XPKeywords: keywords_text.encode("utf-16le"),
+        piexif.ImageIFD.XPTitle: alt.encode("utf-16le"),
+    }
+    exif = piexif.dump({"0th": zeroth})
+    image.save(path, exif=exif, quality=86, method=6)
     return "injected-fr:webp"
 
 
