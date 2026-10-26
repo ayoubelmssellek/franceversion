@@ -70,7 +70,7 @@ export const posts: Post[] = [
     updated: "2026-07-26",
     minutes: 9,
     cover: coverHowToChoose,
-    coverAlt: "Télécommande et Smart TV — checklist IPTV France",
+    coverAlt: "Checklist cochée devant la Smart TV — checklist IPTV France",
     relatedPaths: [
       {
         href: "/blog/meilleur-iptv-france-2026",
@@ -135,7 +135,7 @@ export const posts: Post[] = [
     updated: "2026-07-26",
     minutes: 12,
     cover: coverTopAppsFirestick,
-    coverAlt: "Grille d'applications — meilleure app IPTV France",
+    coverAlt: "Trois applications comparées à l'écran — meilleure app IPTV France",
     relatedPaths: [
       {
         href: "/guides-installation/firestick",
@@ -220,7 +220,7 @@ export const posts: Post[] = [
     date: "2026-01-18",
     minutes: 8,
     cover: coverBestLiveTv,
-    coverAlt: "Match de football à la télévision — IPTV en direct en France",
+    coverAlt: "Match en direct avec un voyant rouge — IPTV en direct en France",
     relatedPaths: [
       {
         href: "/chaines",
@@ -277,7 +277,7 @@ export const posts: Post[] = [
     date: "2026-04-02",
     minutes: 12,
     cover: coverSetupIphoneIpad,
-    coverAlt: "iPhone et applications — IPTV France sur iOS",
+    coverAlt: "iPhone et iPad côte à côte — IPTV France sur iOS",
     relatedPaths: [
       {
         href: "/guides-installation/ios",
@@ -346,7 +346,7 @@ export const posts: Post[] = [
     updated: "2026-07-26",
     minutes: 11,
     cover: coverIptvSmartersProFrance,
-    coverAlt: "Écran de connexion Smarters — IPTV Smarters Pro France Xtream",
+    coverAlt: "Écran de connexion à trois champs — IPTV Smarters Pro France",
     relatedPaths: [
       {
         href: "/guides-installation/firestick",
@@ -413,7 +413,7 @@ export const posts: Post[] = [
     updated: "2026-07-26",
     minutes: 11,
     cover: coverAndroidFrance,
-    coverAlt: "Smartphone Android — application IPTV France sur Android",
+    coverAlt: "Téléphone qui installe une application TV — IPTV Android France",
     relatedPaths: [
       {
         href: "/guides-installation/android",
@@ -481,7 +481,7 @@ export const posts: Post[] = [
     date: "2026-05-14",
     minutes: 11,
     cover: coverBufferingFrance,
-    coverAlt: "Diagnostic réseau — buffering IPTV France",
+    coverAlt: "Écran figé avec un cercle de chargement — buffering IPTV France",
     relatedPaths: [
       {
         href: "/guides-installation",
@@ -567,7 +567,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 16,
     cover: coverMeilleurIptvFrance2026,
-    coverAlt: "Couple devant la Smart TV — meilleur IPTV France 2026 avec chaînes françaises",
+    coverAlt: "Trois critères de choix devant la télé — meilleur IPTV France 2026",
     relatedPaths: [
       {
         href: "/blog/checklist-iptv-france",
@@ -670,7 +670,7 @@ export const posts: Post[] = [
     updated: "2026-07-26",
     minutes: 10,
     cover: coverPrixForfaits,
-    coverAlt: "Forfaits et tarif — tarif IPTV France",
+    coverAlt: "Trois forfaits en euros et calendriers — tarif IPTV France",
     relatedPaths: [
       {
         href: "/tarifs",
@@ -739,7 +739,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 12,
     cover: coverEssaiIptv,
-    coverAlt: "Ordinateur portable avec des données — essai IPTV France 24 heures",
+    coverAlt: "Horloge, sablier et télévision — essai IPTV France 24 heures",
     relatedPaths: [
       {
         href: "/questions-frequentes",
@@ -821,7 +821,7 @@ export const posts: Post[] = [
     updated: "2026-07-26",
     minutes: 11,
     cover: coverSportFrance,
-    coverAlt: "Stade de football la nuit — sport IPTV France",
+    coverAlt: "Football, rugby et cinéma sur un seul écran — sport IPTV France",
     relatedPaths: [
       {
         href: "/chaines#sport-tv",
@@ -894,7 +894,7 @@ export const posts: Post[] = [
     date: "2026-06-20",
     minutes: 11,
     cover: coverLigue1France,
-    coverAlt: "Stade de nuit — Ligue 1 IPTV",
+    coverAlt: "Supporters devant un match de Ligue 1 — IPTV Ligue 1 France",
     relatedPaths: [
       {
         href: "/chaines#liga",
@@ -965,7 +965,7 @@ export const posts: Post[] = [
     updated: "2026-08-01",
     minutes: 16,
     cover: coverListeIptvFrance,
-    coverAlt: "Contexte juridique — liste IPTV France et risques",
+    coverAlt: "Liste avec un triangle d'alerte — liste IPTV France gratuite",
     relatedPaths: [
       {
         href: "/blog/essai-iptv-france",
@@ -1074,7 +1074,7 @@ export const posts: Post[] = [
     date: "2026-07-03",
     minutes: 11,
     cover: coverIptv4kFrance,
-    coverAlt: "Smart TV 4K — IPTV 4K France, qualité réelle",
+    coverAlt: "Image floue à gauche et nette à droite — IPTV 4K France",
     relatedPaths: [
       {
         href: "/tarifs",
@@ -1149,7 +1149,7 @@ export const posts: Post[] = [
     date: "2026-07-05",
     minutes: 10,
     cover: coverBoxIptvFrance,
-    coverAlt: "Fire Stick et box — box IPTV France Android",
+    coverAlt: "Stick, box et télécommande — box IPTV France",
     relatedPaths: [
       {
         href: "/guides-installation/firestick",
@@ -1223,7 +1223,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 12,
     cover: coverIptvVsTvPayante,
-    coverAlt: "Salon avec Smart TV — IPTV France et TV payante",
+    coverAlt: "Petit stick et pièces face à un décodeur et des billets — IPTV et TV payante",
     relatedPaths: [
       { href: "/tarifs", label: "Forfaits MeilleurIPTVFrance", description: "Tarif et connexions." },
       { href: "/quest-ce-que-iptv", label: "Qu'est-ce que l'IPTV", description: "Définition et fonctionnement." },
@@ -1279,7 +1279,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 14,
     cover: coverVoirTvEtranger,
-    coverAlt: "Hôtel avec TV — voir la TV française à l'étranger avec l'IPTV France",
+    coverAlt: "Valise, passeport et télévision française — TV française à l'étranger",
     relatedPaths: [
       { href: "/blog/iptv-france-en-belgique", label: "IPTV France en Belgique", description: "Hub Belgique." },
       { href: "/blog/iptv-france-en-suisse", label: "IPTV France en Suisse", description: "Hub Suisse." },
@@ -1335,7 +1335,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 11,
     cover: coverCoupeDuMonde2026,
-    coverAlt: "Ambiance de match — Coupe du monde 2026 IPTV France",
+    coverAlt: "Coupe et match de football à la maison — Coupe du monde 2026 IPTV France",
     relatedPaths: [
       { href: "/blog/iptv-sport-france", label: "Canal+ en IPTV", description: "Habitudes sport." },
       { href: "/blog/voir-football-iptv-france", label: "Voir le football en IPTV", description: "Football en direct." },
@@ -1388,7 +1388,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 10,
     cover: coverPlusieursAppareils,
-    coverAlt: "TV, tablette et mobile — IPTV France sur plusieurs appareils",
+    coverAlt: "Télévision, tablette et téléphone en même temps — IPTV sur plusieurs appareils",
     relatedPaths: [
       { href: "/pack-premium", label: "Pack Premium (2 connexions)", description: "Salon + un autre écran." },
       { href: "/pack-famille", label: "Pack Famille (3 connexions)", description: "Plusieurs pièces." },
@@ -1441,7 +1441,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 9,
     cover: coverChainesManquantes,
-    coverAlt: "Smart TV vide — chaînes manquantes en IPTV France",
+    coverAlt: "Grille de chaînes avec des cases vides — chaînes manquantes IPTV France",
     relatedPaths: [
       { href: "/chaines", label: "Catalogue de chaînes", description: "Ce que couvre le service. Logos à venir sur le site." },
       { href: "/blog/epg-ne-charge-pas", label: "L'EPG ne charge pas", description: "Guide TV en panne." },
@@ -1494,7 +1494,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 9,
     cover: coverIptvPasCher,
-    coverAlt: "Prévoir le coût — IPTV pas cher en France et abonnement",
+    coverAlt: "Téléviseur et pièces en euros — IPTV pas cher en France",
     relatedPaths: [
       { href: "/tarifs", label: "Tarifs à jour", description: "Grille d'achat." },
       { href: "/blog/iptv-france-prix-forfaits", label: "Comment lire le tarif", description: "Culture des coûts." },
@@ -1542,7 +1542,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverIptvBelgique,
-    coverAlt: "Appartement — IPTV France en Belgique avec chaînes françaises",
+    coverAlt: "Atomium de Bruxelles et journal télévisé français — IPTV France en Belgique",
     relatedPaths: [
       { href: "/blog/voir-tv-francaise-a-letranger", label: "Hub TV française à l'étranger", description: "Guide général à l'étranger." },
       { href: "/blog/iptv-france-en-suisse", label: "IPTV en Suisse", description: "Page sœur." },
@@ -1579,7 +1579,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverIptvSuisse,
-    coverAlt: "Salon en Suisse — IPTV France avec chaînes françaises",
+    coverAlt: "Montagne suisse et télévision française — IPTV France en Suisse",
     relatedPaths: [
       { href: "/blog/voir-tv-francaise-a-letranger", label: "Hub TV française à l'étranger", description: "Guide général." },
       { href: "/blog/iptv-france-en-belgique", label: "IPTV en Belgique", description: "Page sœur." },
@@ -1616,7 +1616,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverInternetPourIptv,
-    coverAlt: "Routeur fibre — internet pour l'IPTV France",
+    coverAlt: "Routeur fibre et compteur de débit — internet pour l'IPTV France",
     relatedPaths: [
       { href: "/blog/iptv-ne-fonctionne-pas-france", label: "Buffering", description: "Checklist pratique." },
       { href: "/blog/iptv-4k-france", label: "IPTV 4K", description: "Quand monter en résolution." },
@@ -1655,7 +1655,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverVoirFootballIptv,
-    coverAlt: "Salon devant le football — IPTV France sport en direct",
+    coverAlt: "Match de football plein écran — football IPTV France",
     relatedPaths: [
       { href: "/blog/iptv-sport-france", label: "Détail Canal+", description: "Lecteur et réseau." },
       { href: "/blog/iptv-ligue-1-france", label: "Ligue 1 et chaînes de clubs", description: "Clubs, grille confirmée dans le lecteur." },
@@ -1702,7 +1702,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverIptvFamilles,
-    coverAlt: "Famille dans le salon — IPTV pour les familles en France",
+    coverAlt: "Famille avec la télévision et une tablette — IPTV pour les familles en France",
     relatedPaths: [
       { href: "/pack-famille", label: "Pack Famille", description: "3 connexions." },
       { href: "/blog/iptv-plusieurs-appareils-france", label: "Plusieurs appareils", description: "Qu'est-ce qu'une connexion." },
@@ -1744,7 +1744,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 9,
     cover: coverTivimateFrance,
-    coverAlt: "Android TV avec EPG — TiviMate IPTV France",
+    coverAlt: "Guide des programmes en grille colorée — TiviMate IPTV France",
     relatedPaths: [
       { href: "/blog/tivimate-vs-iptv-smarters-pro", label: "TiviMate vs Smarters", description: "Comparaison directe." },
       { href: "/blog/xtream-codes-france", label: "Xtream Codes", description: "Les 3 champs." },
@@ -1783,7 +1783,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverTivimateVsSmarters,
-    coverAlt: "Deux lecteurs — TiviMate et IPTV Smarters Pro en France",
+    coverAlt: "Grille de programmes face à un lecteur simple — TiviMate et IPTV Smarters Pro",
     relatedPaths: [
       { href: "/blog/tivimate-france", label: "Réglage de TiviMate", description: "Guide TiviMate." },
       { href: "/blog/iptv-smarters-pro-france", label: "Accès Smarters", description: "Champs et erreurs." },
@@ -1827,7 +1827,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 7,
     cover: coverXtreamCodes,
-    coverAlt: "Accès Xtream — Xtream Codes IPTV France",
+    coverAlt: "Globe, utilisateur et clé — Xtream Codes IPTV France",
     relatedPaths: [
       { href: "/blog/iptv-smarters-pro-france", label: "Smarters pas à pas", description: "Accès détaillé." },
       { href: "/convertisseur-m3u-xtream", label: "M3U et Xtream", description: "Formats." },
@@ -1864,7 +1864,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 7,
     cover: coverIptvFranceGuide,
-    coverAlt: "Salon en France — IPTV français et IPTV France",
+    coverAlt: "Carte de la France et mosaïque de chaînes — IPTV français",
     relatedPaths: [
       { href: "/chaines", label: "Chaînes françaises", description: "Catalogue. Grille confirmée dans le lecteur." },
       { href: "/blog/meilleur-iptv-france-2026", label: "Meilleur IPTV", description: "Checklist." },
@@ -1896,7 +1896,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverGlossaireIptv,
-    coverAlt: "Ordinateur portable et termes — glossaire IPTV France",
+    coverAlt: "Guide, pellicule, playlist et clé — glossaire IPTV France",
     relatedPaths: [
       { href: "/quest-ce-que-iptv", label: "Qu'est-ce que l'IPTV", description: "Définition complète." },
       { href: "/blog/quest-ce-que-m3u", label: "Qu'est-ce que le M3U", description: "Playlist." },
@@ -1954,7 +1954,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 8,
     cover: coverAvantagesIptv,
-    coverAlt: "Personne dans le salon — avantages de l'IPTV France",
+    coverAlt: "Télévision, économies, écrans et sport — avantages de l'IPTV France",
     relatedPaths: [
       { href: "/blog/iptv-vs-tv-payante-france", label: "IPTV et bouquet opérateur", description: "Comparatif pratique." },
       { href: "/blog/iptv-pas-cher-france", label: "IPTV pas cher", description: "Coût réel." },
@@ -2007,7 +2007,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 7,
     cover: coverVpnIptv,
-    coverAlt: "Ordinateur portable et réseau — VPN pour l'IPTV France",
+    coverAlt: "Cadenas et bouclier devant la télévision — VPN pour l'IPTV France",
     relatedPaths: [
       { href: "/questions-frequentes", label: "FAQ", description: "VPN et usage à l'étranger." },
       { href: "/blog/voir-tv-francaise-a-letranger", label: "TV à l'étranger", description: "Français hors de France." },
@@ -2050,7 +2050,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 6,
     cover: coverQuestCeQueM3u,
-    coverAlt: "Écran avec une playlist — qu'est-ce que le M3U IPTV France",
+    coverAlt: "Fichier playlist à côté de la télévision — qu'est-ce que le M3U",
     relatedPaths: [
       { href: "/convertisseur-m3u-xtream", label: "M3U ↔ Xtream", description: "Outil pédagogique." },
       { href: "/blog/liste-iptv-france-gratuite", label: "Listes et risques", description: "Sans dépôts gratuits." },
@@ -2091,7 +2091,7 @@ export const posts: Post[] = [
     updated: "2026-10-11",
     minutes: 7,
     cover: coverEpgNeChargePas,
-    coverAlt: "Guide TV vide — l'EPG ne charge pas en IPTV France",
+    coverAlt: "Guide TV vide avec un chargement — l'EPG ne charge pas",
     relatedPaths: [
       { href: "/blog/iptv-chaines-manquantes", label: "Chaînes manquantes", description: "Checklist sœur." },
       { href: "/blog/iptv-smarters-pro-france", label: "Accès Smarters", description: "Champs Xtream." },
