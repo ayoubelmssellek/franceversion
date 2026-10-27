@@ -107,7 +107,7 @@ function customerHtml(order: OrderPayload) {
       <li>Si vous n'avez pas WhatsApp, répondez à cet e-mail ou patientez — nous vous enverrons votre <strong>lien de paiement sécurisé</strong> ici.</li>
       <li>Après le paiement, nous activons votre compte et nous vous aidons pour l'installation.</li>
     </ol>
-    <p style="color:#555;font-size:13px">MeilleurIPTVFrance · support@meilleuriptvfrance.shop</p>
+    <p style="color:#555;font-size:13px">MeilleurIPTVFrance · support@meilleuresiptvfrance.shop</p>
   </div>`;
 }
 
@@ -181,7 +181,7 @@ export async function sendOrderEmails(order: OrderPayload) {
       `2) Si vous n'avez pas WhatsApp, répondez à cet e-mail ou patientez — nous vous enverrons le lien de paiement sécurisé ici.`,
       `3) Après le paiement, nous activons votre compte et nous vous aidons pour l'installation.`,
       ``,
-      `MeilleurIPTVFrance · support@meilleuriptvfrance.shop`,
+      `MeilleurIPTVFrance · support@meilleuresiptvfrance.shop`,
     ].join("\n"),
   });
 

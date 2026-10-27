@@ -61,7 +61,7 @@ export default function HomeHeadAuthority() {
           Pages utiles d&apos;IPTV France
         </h2>
         <p className="mt-4 max-w-2xl text-[15px] leading-[1.55] text-slate">
-          Raccourcis vers l&apos;essentiel : catalogue, installation, forfaits et guides. Le domaine meilleuriptvfrance.shop
+          Raccourcis vers l&apos;essentiel : catalogue, installation, forfaits et guides. Le domaine meilleuresiptvfrance.shop
           identifie ce service.
         </p>
         <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

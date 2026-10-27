@@ -220,7 +220,7 @@ export const channelFaqs: ChannelFaq[] = [
 export const chainesPageFaqs: ChannelFaq[] = [
   {
     q: "Quelles chaînes françaises sont disponibles ?",
-    a: "Cette page réserve des emplacements aux chaînes françaises (Chaîne française 1, et la suite). Le catalogue actif comprend des généralistes, de l’info et du sport, dont Canal+ selon le forfait. Confirmez toujours dans l’application après la connexion. Les logos seront ajoutés ensuite.",
+    a: "La page montre TF1, France 2, France 3, M6, France 5, Canal+, beIN Sports, Eurosport, L'Équipe, BFM TV, France Info et Arte Info. Le catalogue actif se confirme dans l'application après la connexion.",
   },
   {
     q: "Le service inclut-il des chaînes de sport ?",

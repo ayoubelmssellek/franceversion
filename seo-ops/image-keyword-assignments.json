@@ -562,16 +562,17 @@
       "status": "injected-fr:jpg"
     },
     {
-      "file": "src/assets/images/iptv-france-famille-smart-tv-salon.jpeg",
+      "file": "src/assets/images/iptv-france-famille-ligue-1-smart-tv-paris.jpg",
       "keywords": [
-        "iptv france famille smart tv salon",
+        "ligue 1 iptv",
+        "iptv france famille ligue 1 smart tv paris",
         "iptv france",
         "meilleur iptv france",
         "acheter iptv france",
         "smart tv iptv",
         "MeilleurIPTVFrance"
       ],
-      "alt": "iptv france famille smart tv salon — MeilleurIPTVFrance",
+      "alt": "Famille française devant la Smart TV à Paris — IPTV France, Ligue 1, films et VOD",
       "status": "injected-fr:jpg"
     },
     {
@@ -899,6 +900,176 @@
         "MeilleurIPTVFrance"
       ],
       "alt": "meilleuriptvfrance image open graph — MeilleurIPTVFrance",
+      "status": "injected-fr:jpg"
+    },
+    {
+      "file": "src/assets/channels/tf1-chaine-iptv-france.jpg",
+      "keywords": [
+        "chaînes iptv france",
+        "tf1 chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo TF1 — chaîne IPTV France",
+      "status": "injected-fr:jpg"
+    },
+    {
+      "file": "src/assets/channels/france-2-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "france 2 chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo France 2 — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/france-3-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "france 3 chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo France 3 — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/m6-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "m6 chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo M6 — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/france-5-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "france 5 chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo France 5 — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/canal-plus-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "canal plus chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo Canal+ — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/bein-sports-chaine-iptv-france.jpg",
+      "keywords": [
+        "ligue 1 iptv",
+        "chaînes iptv france",
+        "bein sports chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo beIN Sports — chaîne IPTV France",
+      "status": "injected-fr:jpg"
+    },
+    {
+      "file": "src/assets/channels/eurosport-chaine-iptv-france.jpg",
+      "keywords": [
+        "ligue 1 iptv",
+        "chaînes iptv france",
+        "eurosport chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo Eurosport — chaîne IPTV France",
+      "status": "injected-fr:jpg"
+    },
+    {
+      "file": "src/assets/channels/lequipe-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "lequipe chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo L'Équipe — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/bfm-tv-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "bfm tv chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo BFM TV — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/france-info-chaine-iptv-france.png",
+      "keywords": [
+        "chaînes iptv france",
+        "france info chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo France Info — chaîne IPTV France",
+      "status": "injected-fr:png"
+    },
+    {
+      "file": "src/assets/channels/arte-info-chaine-iptv-france.jpg",
+      "keywords": [
+        "chaînes iptv france",
+        "arte info chaine iptv france",
+        "iptv france",
+        "meilleur iptv france",
+        "acheter iptv france",
+        "smart tv iptv",
+        "MeilleurIPTVFrance"
+      ],
+      "alt": "Logo Arte Info — chaîne IPTV France",
       "status": "injected-fr:jpg"
     }
   ]

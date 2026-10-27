@@ -90,7 +90,7 @@ export default function AProposPage() {
           .
         </p>
         <p>
-          Sur le nom : « MeilleurIPTVFrance » et le domaine meilleuriptvfrance.shop identifient ce service. Des noms
+          Sur le nom : « MeilleurIPTVFrance » et le domaine meilleuresiptvfrance.shop identifient ce service. Des noms
           proches sur d’autres boutiques ou réseaux ne sont pas ce site — vérifiez toujours le site et l’e-mail
           d’assistance ({site.email}) avant de payer.
         </p>

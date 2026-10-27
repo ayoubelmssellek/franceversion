@@ -5,7 +5,7 @@ import { getReviewStats, reviews } from "@/data/reviews";
 
 export const siteConfig = {
   name: "MeilleurIPTVFrance",
-  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.meilleuriptvfrance.shop").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.meilleuresiptvfrance.shop").replace(/\/$/, ""),
   locale: "fr_FR",
   language: "fr-FR",
   country: "France",
@@ -101,14 +101,14 @@ export function organizationJsonLd() {
     logo,
     image: logo,
     description: siteConfig.defaultDescription,
-    email: "support@meilleuriptvfrance.shop",
+    email: "support@meilleuresiptvfrance.shop",
     areaServed: {
       "@type": "Country",
       name: "France",
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "support@meilleuriptvfrance.shop",
+      email: "support@meilleuresiptvfrance.shop",
       contactType: "customer support",
       availableLanguage: ["French"],
       areaServed: "FR",

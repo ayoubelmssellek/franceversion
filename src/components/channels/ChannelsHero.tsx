@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { FrenchChannelSlot } from "@/data/media";
 import { heroStats } from "@/data/channels-page";
@@ -29,8 +30,8 @@ export default function ChannelsHero({ slots }: ChannelsHeroProps) {
               Chaînes IPTV France : télévision nationale et sport
             </h1>
             <p className="animate-rise-delay-2 mt-6 max-w-xl text-[16px] leading-[1.5] text-slate md:text-[18px]">
-              Les emplacements des chaînes françaises sont prêts : les logos seront ajoutés ici. Films, séries et
-              chaînes internationales restent dans le catalogue. Confirmez toujours ce qui est actif dans votre lecteur.
+              TF1, France 2, France 3, M6, Canal+ et les chaînes de sport et d&apos;info. Films, séries et chaînes
+              internationales restent dans le catalogue. Confirmez toujours ce qui est actif dans votre lecteur.
             </p>
             <div className="animate-rise-delay-2 mt-8 flex flex-wrap gap-3">
               <Link href="/tarifs" className="btn btn-solid" aria-label="Voir nos forfaits">
@@ -63,13 +64,20 @@ export default function ChannelsHero({ slots }: ChannelsHeroProps) {
               {logos.map((slot, index) => (
                 <div
                   key={slot.id}
-                  className={`animate-float-soft rounded-2xl border border-dashed border-white/20 bg-white/[0.05] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-md ${
+                  className={`animate-float-soft rounded-2xl border border-white/10 bg-white/[0.05] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-md ${
                     index % 2 === 1 ? "sm:translate-y-6" : ""
                   }`}
                   style={{ animationDelay: `${index * 0.35}s` }}
                 >
-                  <div className="mx-auto flex h-14 w-full items-center justify-center rounded-lg border border-white/15 text-[11px] text-muted">
-                    Logo à fournir
+                  <div className="relative mx-auto h-14 w-full overflow-hidden rounded-lg bg-white">
+                    <Image
+                      src={slot.src}
+                      alt={slot.alt}
+                      title={`${slot.label} IPTV France`}
+                      fill
+                      className="object-contain p-1.5"
+                      sizes="180px"
+                    />
                   </div>
                   <p className="mt-3 text-center text-[12px] text-muted">{slot.label}</p>
                 </div>

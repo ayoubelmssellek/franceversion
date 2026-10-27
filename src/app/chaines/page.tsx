@@ -39,9 +39,9 @@ export default function ChannelsPage() {
           ...(frenchChannelSlots.length
             ? [
                 itemListJsonLd({
-                  name: "Emplacements chaînes françaises",
+                  name: "Chaînes françaises IPTV France",
                   description:
-                    "Emplacements réservés aux chaînes françaises sur cette page. Les logos seront ajoutés ensuite. Ce n'est pas une liste M3U à télécharger.",
+                    "Chaînes françaises présentées sur cette page : TF1, France 2, France 3, M6, Canal+, beIN Sports, Eurosport, L'Équipe, BFM TV, France Info et Arte Info. Ce n'est pas une liste M3U à télécharger.",
                   path: "/chaines",
                   items: frenchChannelSlots.map((slot) => ({ name: slot.label })),
                 }),
@@ -104,9 +104,9 @@ export default function ChannelsPage() {
         <div className="mt-6 max-w-3xl space-y-4 text-[15px] leading-[1.6] text-slate">
           <p>
             Le catalogue ne se limite pas au football. Côté info et généralistes, vous y trouvez des chaînes françaises
-            pour le quotidien, aux côtés de Canal+. Il y a aussi des catégories de divertissement et de contenus jeunesse
-            pour les familles ; confirmez les noms exacts dans le lecteur après la connexion. La grille de cette page
-            reste des emplacements (Chaîne française 1, et la suite) en attendant les logos.
+            pour le quotidien, aux côtés de Canal+, BFM TV, France Info et Arte Info. Il y a aussi des catégories de
+            divertissement et de contenus jeunesse pour les familles ; confirmez les noms exacts dans le lecteur après
+            la connexion.
           </p>
           <p>
             Utilisez les favoris et les catégories du lecteur pour organiser ce qui compte à la maison : l’info le

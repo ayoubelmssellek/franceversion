@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useState, type KeyboardEvent } from "react";
 import { frenchChannelSlots } from "@/data/media";
@@ -73,8 +74,7 @@ export default function ChannelsShowcase() {
               Chaînes IPTV France
             </h2>
             <p className="mt-2 max-w-xl text-[14px] leading-[1.45] text-slate md:text-[15px]">
-              Les emplacements des chaînes françaises sont prêts. Les logos seront ajoutés ici. La liste complète est
-              sur la page Chaînes.
+              TF1, France 2, France 3, M6, Canal+ et beIN Sports. La liste complète est sur la page Chaînes.
             </p>
           </div>
 
@@ -102,7 +102,7 @@ export default function ChannelsShowcase() {
           <div
             role="listbox"
             id={listId}
-            aria-label="Choisir un emplacement de chaîne IPTV France"
+            aria-label="Choisir une chaîne IPTV France"
             aria-activedescendant={`${listId}-option-${activeIndex}`}
             tabIndex={0}
             onKeyDown={onListKeyDown}
@@ -129,8 +129,8 @@ export default function ChannelsShowcase() {
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="flex h-6 w-10 shrink-0 items-center justify-center rounded border border-white/20 text-[9px] text-muted">
-                    Logo
+                  <span className="relative h-6 w-10 shrink-0 overflow-hidden rounded bg-white">
+                    <Image src={slot.src} alt="" fill className="object-contain p-0.5" sizes="40px" />
                   </span>
                   <span className="min-w-0 flex-1 truncate text-[13px] font-medium">{slot.label}</span>
                 </button>
@@ -144,8 +144,15 @@ export default function ChannelsShowcase() {
             aria-labelledby={`${listId}-option-${activeIndex}`}
             className="flex items-center gap-5 bg-deep px-5 py-5 md:gap-8 md:px-8 md:py-6"
           >
-            <div className="flex h-16 w-28 shrink-0 items-center justify-center rounded-xl border border-dashed border-white/25 text-[12px] text-muted md:h-20 md:w-36">
-              Logo à fournir
+            <div className="relative h-16 w-28 shrink-0 overflow-hidden rounded-xl bg-white md:h-20 md:w-36">
+              <Image
+                src={active.src}
+                alt={active.alt}
+                title={`${active.label} IPTV France`}
+                fill
+                className="object-contain p-2"
+                sizes="144px"
+              />
             </div>
             <div key={active.id} className="min-w-0 flex-1 animate-rise">
               <div className="flex flex-wrap items-center gap-2">
@@ -155,7 +162,7 @@ export default function ChannelsShowcase() {
                 </span>
               </div>
               <p className="mt-2 text-[14px] leading-[1.45] text-slate">
-                Emplacement réservé. Le nom et le logo de cette chaîne française seront ajoutés ensuite.
+                {active.label} en direct. Le catalogue exact se confirme dans le lecteur après connexion.
               </p>
               <Link
                 href="/chaines"

@@ -15,7 +15,7 @@ import { posts } from "@/data/blog";
 import { packList } from "@/data/packs";
 import { entertainmentBrands, paymentMethods, posterImages } from "@/data/media";
 import { buildMetadata, faqJsonLd, siteConfig } from "@/lib/seo";
-import heroImage from "@/assets/images/iptv-france-famille-smart-tv-salon.jpeg";
+import heroImage from "@/assets/images/iptv-france-famille-ligue-1-smart-tv-paris.jpg";
 
 export const metadata = buildMetadata({
   title: siteConfig.defaultTitle,
@@ -46,12 +46,12 @@ export default function HomePage() {
       >
         <Image
           src={heroImage}
-          alt="IPTV France famille sur Smart TV — MeilleurIPTVFrance avec chaînes FR, sport et VOD"
-          title="IPTV France — famille devant la TV avec MeilleurIPTVFrance"
+          alt="Famille française devant la Smart TV à Paris — IPTV France, Ligue 1, films et VOD"
+          title="IPTV France — famille devant la Smart TV avec MeilleurIPTVFrance"
           fill
           priority
           quality={92}
-          className="object-cover object-[68%_42%] sm:object-[72%_40%] lg:object-[75%_38%]"
+          className="object-cover object-center"
           sizes="100vw"
         />
         {/* Left readability only — photo stays clear on the right */}

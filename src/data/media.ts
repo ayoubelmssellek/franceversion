@@ -1,5 +1,18 @@
 import type { StaticImageData } from "next/image";
 
+import arteInfo from "@/assets/channels/arte-info-chaine-iptv-france.jpg";
+import beinSports from "@/assets/channels/bein-sports-chaine-iptv-france.jpg";
+import bfmTv from "@/assets/channels/bfm-tv-chaine-iptv-france.png";
+import canalPlus from "@/assets/channels/canal-plus-chaine-iptv-france.png";
+import eurosport from "@/assets/channels/eurosport-chaine-iptv-france.jpg";
+import france2 from "@/assets/channels/france-2-chaine-iptv-france.png";
+import france3 from "@/assets/channels/france-3-chaine-iptv-france.png";
+import france5 from "@/assets/channels/france-5-chaine-iptv-france.png";
+import franceInfo from "@/assets/channels/france-info-chaine-iptv-france.png";
+import lequipe from "@/assets/channels/lequipe-chaine-iptv-france.png";
+import m6 from "@/assets/channels/m6-chaine-iptv-france.png";
+import tf1 from "@/assets/channels/tf1-chaine-iptv-france.jpg";
+
 import appleTvPlus from "@/assets/entertainment-brands/apple-tv-iptv-france.jpg";
 import dazn from "@/assets/entertainment-brands/dazn-iptv-france.webp";
 import disneyPlus from "@/assets/entertainment-brands/disney-plus-iptv-france.jpg";
@@ -45,44 +58,36 @@ export type SeoImage = {
   entity: string;
 };
 
-/**
- * French national channels are not invented here. The owner will supply names and logos.
- * Keep these slots so the same grids as the Spain site stay in place.
- */
 export type FrenchChannelSlot = {
   id: string;
   label: string;
-  category: "Généraliste" | "Sport" | "Info" | "Jeunesse";
+  category: "Généraliste" | "Sport" | "Info";
+  src: StaticImageData;
+  alt: string;
 };
 
-const SLOT_PLAN: Array<Pick<FrenchChannelSlot, "category">> = [
-  { category: "Généraliste" },
-  { category: "Généraliste" },
-  { category: "Généraliste" },
-  { category: "Généraliste" },
-  { category: "Sport" },
-  { category: "Sport" },
-  { category: "Sport" },
-  { category: "Info" },
-  { category: "Info" },
-  { category: "Jeunesse" },
-  { category: "Généraliste" },
-  { category: "Généraliste" },
-  { category: "Sport" },
-  { category: "Info" },
+export const frenchChannelSlots: FrenchChannelSlot[] = [
+  { id: "tf1", label: "TF1", category: "Généraliste", src: tf1, alt: "Logo TF1 — chaîne IPTV France" },
+  { id: "france-2", label: "France 2", category: "Généraliste", src: france2, alt: "Logo France 2 — chaîne IPTV France" },
+  { id: "france-3", label: "France 3", category: "Généraliste", src: france3, alt: "Logo France 3 — chaîne IPTV France" },
+  { id: "m6", label: "M6", category: "Généraliste", src: m6, alt: "Logo M6 — chaîne IPTV France" },
+  { id: "canal-plus", label: "Canal+", category: "Sport", src: canalPlus, alt: "Logo Canal+ — chaîne IPTV France" },
+  { id: "bein-sports", label: "beIN Sports", category: "Sport", src: beinSports, alt: "Logo beIN Sports — chaîne IPTV France" },
+  { id: "eurosport", label: "Eurosport", category: "Sport", src: eurosport, alt: "Logo Eurosport — chaîne IPTV France" },
+  { id: "bfm-tv", label: "BFM TV", category: "Info", src: bfmTv, alt: "Logo BFM TV — chaîne IPTV France" },
+  { id: "france-info", label: "France Info", category: "Info", src: franceInfo, alt: "Logo France Info — chaîne IPTV France" },
+  { id: "france-5", label: "France 5", category: "Généraliste", src: france5, alt: "Logo France 5 — chaîne IPTV France" },
+  { id: "arte-info", label: "Arte Info", category: "Info", src: arteInfo, alt: "Logo Arte Info — chaîne IPTV France" },
+  { id: "lequipe", label: "L'Équipe", category: "Sport", src: lequipe, alt: "Logo L'Équipe — chaîne IPTV France" },
 ];
 
-export const frenchChannelSlots: FrenchChannelSlot[] = SLOT_PLAN.map((slot, index) => {
-  const number = String(index + 1).padStart(2, "0");
-  return {
-    id: `fr-chaine-${number}`,
-    label: `Chaîne française ${index + 1}`,
-    category: slot.category,
-  };
-});
-
-/** National channel logos are intentionally empty until the French lineup is provided. */
-export const channelLogos: SeoImage[] = [];
+export const channelLogos: SeoImage[] = frenchChannelSlots.map((slot) => ({
+  src: slot.src,
+  alt: slot.alt,
+  title: `${slot.label} IPTV France`,
+  keyword: "commercial",
+  entity: slot.label,
+}));
 
 export const entertainmentBrands: SeoImage[] = [
   {

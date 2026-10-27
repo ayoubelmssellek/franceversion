@@ -8,14 +8,14 @@
 ## Current status
 
 - UI, pages, and data are French (`fr-FR`), market France.
-- Brand / domain: **MeilleurIPTVFrance** · `https://www.meilleuriptvfrance.shop` · `support@meilleuriptvfrance.shop`.
+- Brand / domain: **MeilleurIPTVFrance** · `https://www.meilleuresiptvfrance.shop` · `support@meilleuresiptvfrance.shop`.
 - Locale: `fr-FR` / `fr_FR`; checkout country lock `FR`.
 - Public paths are French (`/tarifs`, `/chaines`, `/questions-frequentes`, blog slugs `*-france`).
 - Open Graph image is `public/meilleuriptvfrance-image-open-graph.jpg`.
 - Colors follow the French flag: blue `#0055A4`, white `#FFFFFF`, red `#EF4135`.
-- French national channel logos are placeholders (`Chaîne française 1` …). The owner will supply names and logos. Do not invent that lineup.
+- French channel logos on the site: TF1, France 2, France 3, M6, France 5, Canal+, beIN Sports, Eurosport, L'Équipe, BFM TV, France Info, Arte Info. Ligue 1 and Top 14 stay as name cards until those logos are supplied.
 - WhatsApp number is still `212637573773`. Messages from this site are French and say IPTV France.
-- Confirm before launch: domain, mailbox, and the Meld/Banxa checkout wallets.
+- Domain is `meilleuresiptvfrance.shop`. Create the mailbox `support@meilleuresiptvfrance.shop` before checkout email is tested. Confirm the Meld/Banxa checkout wallets before launch.
 
 ## Stack
 

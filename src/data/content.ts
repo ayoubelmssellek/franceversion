@@ -3,7 +3,7 @@ import { getPlans } from "@/lib/plan-pricing";
 export const site = {
   name: "MeilleurIPTVFrance",
   tagline: "Streaming stable pour la France — chaînes, sport et VOD",
-  email: "support@meilleuriptvfrance.shop",
+  email: "support@meilleuresiptvfrance.shop",
 };
 
 export const navLinks = [

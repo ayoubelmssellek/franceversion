@@ -82,7 +82,7 @@ export default function BuyOnlineStatement() {
               </ul>
               <div className="mt-8 border-t border-white/10 pt-6">
                 <p className="text-[28px] tracking-[-0.8px] text-white">MeilleurIPTVFrance</p>
-                <p className="mt-1 text-[13px] text-muted">IPTV France · meilleuriptvfrance.shop</p>
+                <p className="mt-1 text-[13px] text-muted">IPTV France · meilleuresiptvfrance.shop</p>
               </div>
             </aside>
           </Reveal>
