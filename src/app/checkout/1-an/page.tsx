@@ -4,6 +4,6 @@ import { redirect } from "next/navigation";
 const PAYMENT_URL =
   "https://meldcrypto.com/?publicKey=WGtfQDvEVHeBW8HQkyejDb:2mCz6gKyTSyhfYPUgUEGUXaeEiSHP9LUt4t&destinationCurrencyCodeLocked=POL&walletAddressLocked=0xE35073eb6309CdeC787E0924FD61F83b8dab3738&sourceCurrencyCodeLocked=EUR&sourceAmountLocked=45&countryCodeLocked=FR";
 
-export default function Checkout1AnoRedirectPage() {
+export default function Checkout1AnRedirectPage() {
   redirect(PAYMENT_URL);
 }

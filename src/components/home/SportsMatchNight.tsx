@@ -79,7 +79,7 @@ export default function SportsMatchNight({ competitions, featured }: SportsMatch
                 45.000<span className="text-white/35">+</span>
               </p>
               <p className="mt-3 text-[15px] text-slate">chaînes en direct · sport · HD / FHD / 4K</p>
-              <Link href="#planes" className="btn btn-solid mt-8 inline-flex" aria-label="Choisir un forfait IPTV">
+              <Link href="#forfaits" className="btn btn-solid mt-8 inline-flex" aria-label="Choisir un forfait IPTV">
                 Choisir un forfait
               </Link>
             </div>
@@ -157,7 +157,7 @@ export default function SportsMatchNight({ competitions, featured }: SportsMatch
                   Ligue 1 · Champions · Canal+ dans le même IPTV Premium
                 </p>
                 <Link
-                  href="#planes"
+                  href="#forfaits"
                   className="text-[13px] font-medium text-white underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   Voir les forfaits →

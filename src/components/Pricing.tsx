@@ -23,7 +23,7 @@ export default function Pricing({ features = planFeatures }: PricingProps) {
   const familyCompare = getFamilyPlanCompare();
 
   return (
-    <div id="planes">
+    <div id="forfaits">
       <div className="mb-12 max-w-2xl">
         <p className="label">IPTV : paiement unique</p>
         <h2 className="mt-4 text-[36px] tracking-[-0.9px] text-white md:text-[40px]">

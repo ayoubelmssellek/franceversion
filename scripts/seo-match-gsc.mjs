@@ -181,7 +181,7 @@ function main() {
   }
 
   const head = rows.filter((r) =>
-    ["iptv españa", "mejor iptv españa", "iptv españa precio"].includes(r.query),
+    ["iptv france", "meilleures iptv france", "iptv france prix"].includes(r.query),
   );
   console.log("\n--- Head terms ---");
   for (const r of head) {
