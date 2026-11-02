@@ -130,7 +130,7 @@ export default function AProposPage() {
           </Link>
           ,{" "}
           <Link href="/pack-premium" className="text-white underline-offset-4 hover:underline">
-            Premium 89 €
+            Premium 79 €
           </Link>{" "}
           et{" "}
           <Link href="/pack-famille" className="text-white underline-offset-4 hover:underline">
@@ -357,7 +357,7 @@ export default function AProposPage() {
           </li>
           <li>
             <strong className="text-white">Tarifs et connexions visibles</strong> — packs dès 25 € (trimestriel), 45 €
-            (basique), 89 € (premium) et 104 € (famille), avec 1, 2 ou 3 connexions selon le forfait.
+            (basique), 79 € (premium) et 104 € (famille), avec 1, 2 ou 3 connexions selon le forfait.
           </li>
           <li>
             <strong className="text-white">Assistance 24h/24</strong> — e-mail et WhatsApp pour l’installation, le

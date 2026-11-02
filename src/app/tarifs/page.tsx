@@ -54,7 +54,7 @@ export default function TarifsPage() {
           Acheter un IPTV France
         </h1>
         <p className="animate-rise-delay-2 mt-5 max-w-2xl text-[16px] leading-[1.5] text-slate md:text-[18px]">
-          Comparez les forfaits par durée et nombre de connexions (1, 2 ou 3). Packs mis en avant à 25 €, 45 €, 89 € et
+          Comparez les forfaits par durée et nombre de connexions (1, 2 ou 3). Packs mis en avant à 25 €, 45 €, 79 € et
           104 € — paiement unique, activation après la confirmation du paiement et assistance 24h/24 en français.
         </p>
         <div className="animate-rise-delay-2 mt-8 flex flex-wrap gap-3">
@@ -264,7 +264,7 @@ export default function TarifsPage() {
             Packs mis en avant
           </h2>
           <p className="mt-3 max-w-2xl text-[15px] leading-[1.55] text-slate">
-            Quatre forfaits avec une page dédiée — 25 €, 45 €, 89 € et 104 € selon la durée et les connexions. Le
+            Quatre forfaits avec une page dédiée — 25 €, 45 €, 79 € et 104 € selon la durée et les connexions. Le
             tableau du haut reste la matrice complète (autres durées incluses).
           </p>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -357,7 +357,7 @@ export default function TarifsPage() {
             Prêt à choisir le forfait ?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[15px] leading-[1.55] text-slate">
-            Comparez les tarifs (25 €, 45 €, 89 € ou 104 € dans les packs mis en avant), demandez l’essai de 24 heures si
+            Comparez les tarifs (25 €, 45 €, 79 € ou 104 € dans les packs mis en avant), demandez l’essai de 24 heures si
             vous voulez valider le réseau et comptez sur la garantie de 7 jours après l’achat.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

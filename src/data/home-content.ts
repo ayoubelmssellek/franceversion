@@ -14,7 +14,7 @@ export const homeFaqs = [
   },
   {
     q: "Combien coûtent les forfaits ?",
-    a: "Les packs mis en avant sont à 25 €, 45 €, 89 € et 104 €, selon la durée et le nombre de connexions (1, 2 ou 3). Le tableau complet est sur Tarifs — paiement unique, sans renouvellement automatique surprise.",
+    a: "Les packs mis en avant sont à 25 €, 45 €, 79 € et 104 €, selon la durée et le nombre de connexions (1, 2 ou 3). Le tableau complet est sur Tarifs — paiement unique, sans renouvellement automatique surprise.",
   },
   {
     q: "Comment acheter et activer le service ?",

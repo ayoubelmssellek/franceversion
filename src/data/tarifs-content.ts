@@ -73,7 +73,7 @@ export const tarifsConnectionCompare = [
 export const tarifsFaqs = [
   {
     q: "Combien coûtent les forfaits MeilleurIPTVFrance ?",
-    a: "Les packs mis en avant sont à 25 €, 45 €, 89 € et 104 €, selon la durée et le nombre de connexions (1, 2 ou 3). Le tableau de cette page affiche tous les tarifs à jour — paiement unique.",
+    a: "Les packs mis en avant sont à 25 €, 45 €, 79 € et 104 €, selon la durée et le nombre de connexions (1, 2 ou 3). Le tableau de cette page affiche tous les tarifs à jour — paiement unique.",
   },
   {
     q: "Comment acheter et activer le service ?",

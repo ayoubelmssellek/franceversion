@@ -33,8 +33,8 @@ const ONE_CONNECTION: Record<Duration, PriceEntry> = {
 const TWO_CONNECTIONS: Record<Duration, PriceEntry> = {
   "1M": { price: 19, compare: 29 },
   "3M": { price: 39, compare: 55 },
-  "6M": { price: 59, compare: 79 },
-  "1Y": { price: 89, compare: 119 },
+  "6M": { price: 49, compare: 79 },
+  "1Y": { price: 79, compare: 119 },
 };
 
 const THREE_CONNECTIONS_1Y: PriceEntry = { price: 104, compare: 157 };

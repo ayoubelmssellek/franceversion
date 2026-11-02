@@ -425,7 +425,7 @@ export default function QuestCeQueIptvPage() {
           ))}
         </ul>
         <p>
-          Packs mis en avant à 25 €, 45 €, 89 € et 104 € selon la durée et les connexions — tableau complet sur{" "}
+          Packs mis en avant à 25 €, 45 €, 79 € et 104 € selon la durée et les connexions — tableau complet sur{" "}
           <Link href="/tarifs" className="text-white underline-offset-4 hover:underline">
             Tarifs
           </Link>

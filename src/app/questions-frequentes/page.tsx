@@ -74,7 +74,7 @@ const legalite = [
 const forfaits = [
   {
     q: "Combien coûtent les forfaits ?",
-    a: "Les packs mis en avant coûtent 25 €, 45 €, 89 € et 104 €, selon la durée et le nombre de connexions (1, 2 ou 3). Comparez-les sur la page Tarifs — paiement unique, sans renouvellement automatique surprise.",
+    a: "Les packs mis en avant coûtent 25 €, 45 €, 79 € et 104 €, selon la durée et le nombre de connexions (1, 2 ou 3). Comparez-les sur la page Tarifs — paiement unique, sans renouvellement automatique surprise.",
   },
   {
     q: "Comment choisir le nombre de connexions ?",
