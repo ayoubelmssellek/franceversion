@@ -169,7 +169,7 @@ export const keywordPageMap: SeoPageMapping[] = [
 ];
 
 /** Paths that must stay out of sitemap / indexing. */
-export const neverIndexPaths = ["/checkout", "/merci", "/paiement-usd", "/api"] as const;
+export const neverIndexPaths = ["/checkout", "/merci", "/pay", "/paiement-usd", "/api"] as const;
 
 /** Seasonal content owners (human refresh cadence). */
 export const seasonalRefreshOwners = [

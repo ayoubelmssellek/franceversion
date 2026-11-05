@@ -1,21 +1,48 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import { FormEvent, Suspense, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { FormEvent, Suspense, useEffect, useMemo, useState } from "react";
 import { Check, Lock, ShieldCheck } from "lucide-react";
 import CheckoutHeader from "@/components/CheckoutHeader";
 import { checkoutBenefits, formatMoney, resolvePlan } from "@/data/plans";
+import { payHandoffUrl, successHandoffUrl } from "@/lib/pay-handoff";
+
+type PayMode = "fixed" | "flex" | "open" | "manual";
 
 function CheckoutForm() {
-  const router = useRouter();
   const params = useSearchParams();
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [mode, setMode] = useState<PayMode>("manual");
+  const [customAmount, setCustomAmount] = useState("");
   const plan = useMemo(
     () => resolvePlan(params.get("plan"), params.get("connections")),
     [params],
   );
+
+  const needsAmountInput = mode === "flex" || mode === "open";
+
+  useEffect(() => {
+    setCustomAmount(String(plan.price));
+    let cancelled = false;
+    (async () => {
+      try {
+        const q = new URLSearchParams({
+          plan: plan.id,
+          connections: String(plan.connections),
+        });
+        const res = await fetch(`/api/paycontrol/mode?${q.toString()}`);
+        const data = (await res.json()) as { mode?: PayMode };
+        if (!cancelled && data.mode) setMode(data.mode);
+      } catch {
+        if (!cancelled) setMode("manual");
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [plan.id, plan.connections, plan.price]);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -23,8 +50,8 @@ function CheckoutForm() {
     setSubmitting(true);
 
     const form = new FormData(e.currentTarget);
-    const orderId = String(4000 + Math.floor(Math.random() * 5000));
-    const payload = {
+    const orderId = `${Date.now()}-${Math.floor(Math.random() * 9000 + 1000)}`;
+    const payload: Record<string, string | number> = {
       orderId,
       plan: plan.id,
       connections: plan.connections,
@@ -34,30 +61,75 @@ function CheckoutForm() {
       country: String(form.get("country") || ""),
     };
 
+    if (needsAmountInput) {
+      payload.amount = String(form.get("amount") || customAmount || plan.price);
+    }
+
     try {
-      const res = await fetch("/api/orders", {
+      const res = await fetch("/api/paycontrol/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = (await res.json()) as { ok?: boolean; orderId?: string; error?: string };
+      const data = (await res.json()) as {
+        ok?: boolean;
+        orderId?: string;
+        error?: string;
+        paymentUrl?: string;
+        redirectTo?: string;
+        mode?: PayMode;
+        openAmountHint?: string;
+      };
+
       if (!res.ok || !data.ok) {
         throw new Error(data.error || "Impossible de finaliser la commande.");
+      }
+
+      if (data.paymentUrl) {
+        try {
+          window.location.replace(
+            payHandoffUrl(data.paymentUrl, {
+              orderId: data.orderId || orderId,
+              plan: plan.id,
+              connections: plan.connections,
+              email: String(payload.email),
+              name: String(payload.name),
+            }),
+          );
+          return;
+        } catch {
+          // continue to old thank-you below
+        }
       }
 
       const q = new URLSearchParams({
         order: data.orderId || orderId,
         plan: plan.id,
         connections: String(plan.connections),
-        email: payload.email,
-        name: payload.name,
-        whatsapp: payload.whatsapp,
-        country: payload.country,
+        email: String(payload.email),
+        name: String(payload.name),
+        whatsapp: String(payload.whatsapp),
+        country: String(payload.country),
       });
-      router.push(`/merci?${q.toString()}`);
+
+      // Old method: order created → local /merci (WhatsApp), not the payment shell.
+      if (data.mode === "manual" && data.redirectTo) {
+        window.location.replace(data.redirectTo);
+        return;
+      }
+
+      if (data.redirectTo) {
+        const qs = data.redirectTo.includes("?")
+          ? data.redirectTo.slice(data.redirectTo.indexOf("?") + 1)
+          : q.toString();
+        window.location.replace(successHandoffUrl(new URLSearchParams(qs)));
+        return;
+      }
+
+      window.location.replace(`/merci?${q.toString()}`);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "Un problème est survenu. Réessayez.",
+        err instanceof Error ? err.message : "Une erreur s'est produite. Réessayez.",
       );
       setSubmitting(false);
     }
@@ -69,6 +141,14 @@ function CheckoutForm() {
   const connectionLabel =
     plan.connections === 1 ? "1 connexion" : `${plan.connections} connexions`;
 
+  const payLabel = needsAmountInput
+    ? submitting
+      ? "Traitement…"
+      : `Continuer pour payer ${formatMoney(Number(customAmount) || plan.price)}`
+    : submitting
+      ? "Traitement…"
+      : `Payer ${formatMoney(plan.price)}`;
+
   const payButton = (formAttr?: boolean) => (
     <button
       type="submit"
@@ -77,7 +157,7 @@ function CheckoutForm() {
       className="btn btn-solid w-full py-3.5 text-[15px] disabled:opacity-60"
     >
       <Lock size={14} />
-      {submitting ? "Traitement…" : `Payer ${formatMoney(plan.price)}`}
+      {payLabel}
     </button>
   );
 
@@ -86,11 +166,10 @@ function CheckoutForm() {
       <CheckoutHeader step={1} />
 
       <div className="mx-auto grid w-full max-w-5xl gap-8 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:py-10">
-        {/* Left — inputs */}
         <form id="checkout-form" onSubmit={onSubmit} className="min-w-0 space-y-4">
           <div>
             <h1 className="text-[26px] tracking-[-0.6px] text-white md:text-[30px]">Finaliser la commande</h1>
-            <p className="mt-1 text-[13px] text-muted">Renseignez vos coordonnées pour continuer le paiement.</p>
+            <p className="mt-1 text-[13px] text-muted">Remplissez vos informations pour continuer vers le paiement.</p>
           </div>
 
           <label className="block text-[13px] text-slate">
@@ -114,7 +193,7 @@ function CheckoutForm() {
             <label className="block text-[13px] text-slate">
               Pays <span className="text-white">*</span>
               <select required name="country" defaultValue="France" className={`${field} bg-black`}>
-                {["France", "Belgique", "Suisse", "Maroc", "Allemagne", "Autre"].map((c) => (
+                {["France", "Belgique", "Suisse", "Portugal", "Espagne", "Maroc", "Autre"].map((c) => (
                   <option key={c} value={c}>
                     {c}
                   </option>
@@ -127,18 +206,47 @@ function CheckoutForm() {
             </label>
           </div>
 
+          {needsAmountInput ? (
+            <div className="rounded-[8px] border border-amber-500/35 bg-amber-500/10 px-4 py-3 text-[13px] leading-[1.5] text-amber-50">
+              <p className="font-semibold text-white">Paiement avec montant à saisir</p>
+              <p className="mt-1.5 text-amber-100/90">
+                Ce forfait n'a pas encore de lien de paiement fixe dans PayControl. Le prix de votre forfait est{" "}
+                <strong className="text-white">{formatMoney(plan.price)}</strong> ({plan.productName},{" "}
+                {connectionLabel}).
+              </p>
+              <p className="mt-1.5 text-amber-100/90">
+                Confirmez ou ajustez le montant ci-dessous. Sur l'écran suivant (Stripe), utilisez{" "}
+                <strong className="text-white">exactement ce montant en euros</strong> pour que le support
+                active le bon forfait.
+              </p>
+              <label className="mt-3 block text-[13px] text-amber-50">
+                Montant à payer (EUR) <span className="text-white">*</span>
+                <input
+                  required
+                  type="number"
+                  name="amount"
+                  min={1}
+                  max={5000}
+                  step="0.01"
+                  value={customAmount}
+                  onChange={(ev) => setCustomAmount(ev.target.value)}
+                  className={`${field} border-amber-500/40`}
+                />
+              </label>
+            </div>
+          ) : null}
+
           {error ? (
             <p className="rounded-[6px] border border-red-500/40 bg-red-500/10 px-3 py-2 text-[13px] text-red-200">
               {error}
             </p>
           ) : null}
 
-          {/* Pay on mobile under the form */}
           <div className="space-y-2 pt-1 lg:hidden">
             {payButton()}
             <p className="flex items-center justify-center gap-1.5 text-[12px] text-muted">
               <ShieldCheck size={13} className="text-white/70" />
-              Paiement sécurisé · garantie de 7 jours
+              Paiement sécurisé · garantie 7 jours
             </p>
           </div>
 
@@ -149,29 +257,32 @@ function CheckoutForm() {
           </p>
         </form>
 
-        {/* Right — order + what you get (sticky) */}
         <aside className="lg:sticky lg:top-6 lg:self-start">
           <div className="rounded-[10px] border border-line bg-surface p-5">
-            <h2 className="text-[15px] font-semibold text-white">Récapitulatif de la commande</h2>
+            <h2 className="text-[15px] font-semibold text-white">Récapitulatif</h2>
 
             <div className="mt-4 flex items-start justify-between gap-3 border-b border-line pb-4">
               <div className="min-w-0">
                 <p className="text-[14px] font-medium text-white">{plan.productName}</p>
                 <p className="mt-0.5 text-[12px] text-muted">{connectionLabel}</p>
               </div>
-              <p className="shrink-0 text-[16px] font-semibold text-white">{formatMoney(plan.price)}</p>
+              <p className="shrink-0 text-[16px] font-semibold text-white">
+                {formatMoney(needsAmountInput ? Number(customAmount) || plan.price : plan.price)}
+              </p>
             </div>
 
             <div className="mt-4 flex items-center justify-between text-[15px]">
               <span className="text-slate">Total</span>
-              <span className="text-[20px] font-semibold text-white">{formatMoney(plan.price)}</span>
+              <span className="text-[20px] font-semibold text-white">
+                {formatMoney(needsAmountInput ? Number(customAmount) || plan.price : plan.price)}
+              </span>
             </div>
 
             <div className="mt-5 hidden space-y-2 lg:block">
               {payButton(true)}
               <p className="flex items-center justify-center gap-1.5 text-[12px] text-muted">
                 <ShieldCheck size={13} className="text-white/70" />
-                Paiement sécurisé · garantie de 7 jours
+                Paiement sécurisé · garantie 7 jours
               </p>
             </div>
 

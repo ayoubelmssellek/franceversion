@@ -10,7 +10,7 @@ import { getWhatsAppIntl } from "@/lib/whatsapp";
 
 function ThankYouContent() {
   const params = useSearchParams();
-  const order = params.get("order") || "4453";
+  const order = params.get("order") || "";
   const name = params.get("name") || "";
   const email = params.get("email") || "";
   const customerWhatsapp = params.get("whatsapp") || "";

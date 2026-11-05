@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/content";
-import TrialBanner from "@/components/TrialBanner";
 import brandLogo from "@/assets/brand/meilleur-iptv-france-logo-navbar.jpeg";
 
 export default function Header() {
@@ -15,7 +14,6 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line/80 bg-deep/95 backdrop-blur-md">
-      <TrialBanner />
       <div className="section-shell flex h-16 items-center justify-between gap-4 md:h-20">
         <Link href="/" className="inline-flex shrink-0" aria-label="MeilleurIPTVFrance — accueil">
           <Image
