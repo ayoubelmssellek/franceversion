@@ -208,19 +208,12 @@ function CheckoutForm() {
 
           {needsAmountInput ? (
             <div className="rounded-[8px] border border-amber-500/35 bg-amber-500/10 px-4 py-3 text-[13px] leading-[1.5] text-amber-50">
-              <p className="font-semibold text-white">Paiement avec montant à saisir</p>
+              <p className="font-semibold text-white">Prix du forfait : {formatMoney(plan.price)}</p>
               <p className="mt-1.5 text-amber-100/90">
-                Ce forfait n'a pas encore de lien de paiement fixe dans PayControl. Le prix de votre forfait est{" "}
-                <strong className="text-white">{formatMoney(plan.price)}</strong> ({plan.productName},{" "}
-                {connectionLabel}).
-              </p>
-              <p className="mt-1.5 text-amber-100/90">
-                Confirmez ou ajustez le montant ci-dessous. Sur l'écran suivant (Stripe), utilisez{" "}
-                <strong className="text-white">exactement ce montant en euros</strong> pour que le support
-                active le bon forfait.
+                Sur l'écran suivant, saisissez exactement ce montant.
               </p>
               <label className="mt-3 block text-[13px] text-amber-50">
-                Montant à payer (EUR) <span className="text-white">*</span>
+                Montant (EUR) <span className="text-white">*</span>
                 <input
                   required
                   type="number"

@@ -219,7 +219,7 @@ export async function POST(request: Request) {
         amount,
         expectedAmount: plan.price,
         paymentUrl: openUrl,
-        openAmountHint: `Sur l'écran de paiement, saisissez exactement ${amount.toFixed(2)} EUR (forfait ${plan.productName}).`,
+        openAmountHint: `Sur l'écran suivant, saisissez exactement ${amount.toFixed(2)} EUR.`,
       });
     }
 
