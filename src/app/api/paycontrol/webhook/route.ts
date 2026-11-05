@@ -73,19 +73,20 @@ async function handleEvent(event: PaycontrolWebhookEvent) {
   if (!from) return;
 
   const euros = (checkout.amount / 100).toFixed(2);
-  const subject = `PayControl pago · encomenda ${checkout.order_id || checkout.id}`;
+  const orderRef = checkout.order_id || checkout.id;
+  const subject = `[Paid] #${orderRef} — ${euros} ${checkout.currency}`;
   const text = [
-    `Pagamento confirmado (PayControl).`,
+    `Payment confirmed (Stripe / PayControl). Activate the account.`,
     ``,
-    `Evento: ${event.type} (#${event.id})`,
+    `Event: ${event.type} (#${event.id})`,
     `Checkout: ${checkout.id}`,
-    `Order: ${checkout.order_id || "—"}`,
-    `Estado: ${checkout.status}`,
-    `Valor: ${euros} ${checkout.currency}`,
+    `Order: ${orderRef}`,
+    `Status: ${checkout.status}`,
+    `Amount: ${euros} ${checkout.currency}`,
     `Email: ${checkout.payment?.email || checkout.email || "—"}`,
-    `Nome: ${checkout.payment?.name || checkout.name || "—"}`,
+    `Name: ${checkout.payment?.name || checkout.name || "—"}`,
     `Link: ${checkout.link_name || checkout.link_id || "—"}`,
-    `Pago em: ${checkout.paid_at || event.at}`,
+    `Paid at: ${checkout.paid_at || event.at}`,
   ].join("\n");
 
   await transporter.sendMail({ from, to, subject, text });

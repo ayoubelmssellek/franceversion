@@ -95,9 +95,12 @@ export async function POST(request: Request) {
       country: String(body.country || "").trim(),
     };
 
-    // Keep existing order emails (best-effort).
+    // Do NOT email on Stripe open — only after PayControl webhook (paid),
+    // or on manual/merci fallback (WhatsApp order flow).
     let mailSent = false;
-    if (isMailConfigured()) {
+
+    async function sendManualOrderMail() {
+      if (!isMailConfigured()) return;
       try {
         const result = await sendOrderEmails(order);
         mailSent = result.sent;
@@ -108,8 +111,9 @@ export async function POST(request: Request) {
 
     const returnUrl = shellSuccessReturnUrl();
 
-    const manual = (reason?: string) =>
-      manualMerciResponse({
+    const manual = async (reason?: string) => {
+      await sendManualOrderMail();
+      return manualMerciResponse({
         orderId,
         mailSent,
         planId: plan.id,
@@ -120,9 +124,10 @@ export async function POST(request: Request) {
         country: order.country,
         reason,
       });
+    };
 
     if (!isPaycontrolConfigured() || mode === "manual") {
-      return manual();
+      return await manual();
     }
 
     // Fixed product link for this plan.
@@ -140,7 +145,7 @@ export async function POST(request: Request) {
         });
 
         if (!created.ok || !created.data.url) {
-          return manual(
+          return await manual(
             created.ok === false
               ? created.body.reason || "fixed checkout failed"
               : "fixed checkout missing url",
@@ -150,13 +155,13 @@ export async function POST(request: Request) {
         return NextResponse.json({
           ok: true,
           orderId,
-          mailSent,
+          mailSent: false,
           mode: "fixed",
           checkoutId: created.data.id,
           paymentUrl: created.data.url,
         });
       } catch (err) {
-        return manual(err instanceof Error ? err.message : "fixed checkout threw");
+        return await manual(err instanceof Error ? err.message : "fixed checkout threw");
       }
     }
 
@@ -183,7 +188,7 @@ export async function POST(request: Request) {
         });
 
         if (!created.ok || !created.data.url) {
-          return manual(
+          return await manual(
             created.ok === false
               ? created.body.reason || "flex checkout failed"
               : "flex checkout missing url",
@@ -193,14 +198,14 @@ export async function POST(request: Request) {
         return NextResponse.json({
           ok: true,
           orderId,
-          mailSent,
+          mailSent: false,
           mode: "flex",
           amount,
           checkoutId: created.data.id,
           paymentUrl: created.data.url,
         });
       } catch (err) {
-        return manual(err instanceof Error ? err.message : "flex checkout threw");
+        return await manual(err instanceof Error ? err.message : "flex checkout threw");
       }
     }
 
@@ -209,7 +214,7 @@ export async function POST(request: Request) {
       return NextResponse.json({
         ok: true,
         orderId,
-        mailSent,
+        mailSent: false,
         mode: "open",
         amount,
         expectedAmount: plan.price,
@@ -218,7 +223,7 @@ export async function POST(request: Request) {
       });
     }
 
-    return manual("no payment link configured");
+    return await manual("no payment link configured");
   } catch (error) {
     console.error("[paycontrol/checkout]", error);
     return NextResponse.json(
